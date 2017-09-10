@@ -18,4 +18,5 @@ public class BulldogListActivity extends AppCompatActivity {
         String email = getIntent().getStringExtra("email");
         textView.setText(email);
     }
+
 }
