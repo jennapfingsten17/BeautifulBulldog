@@ -40,11 +40,11 @@ public class LoginActivity extends AppCompatActivity {
 
     private void login(final String email, final String password, final String username) {
         SyncCredentials myCredentials = SyncCredentials.usernamePassword(email, password, false);
-        SyncUser.loginAsync(myCredentials, "http://ec2-52-205-194-154.compute-1.amazonaws.com:9080", new SyncUser.Callback() {
+        SyncUser.loginAsync(myCredentials, "http://52.205.194.154:9080", new SyncUser.Callback() {
             @Override
             public void onSuccess(SyncUser user) {
                 SyncConfiguration configuration = new SyncConfiguration
-                        .Builder(user, "realm://ec2-52-205-194-154.compute-1.amazonaws.com:9080/~/bulldog")
+                        .Builder(user, "realm:/52.205.194.154:9080/~/bulldog")
                         .disableSSLVerification().waitForInitialRemoteData().schemaVersion((long) 12.0).build();
                         Realm.setDefaultConfiguration(configuration);
 
