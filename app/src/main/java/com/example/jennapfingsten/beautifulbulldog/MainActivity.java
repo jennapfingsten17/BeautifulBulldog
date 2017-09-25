@@ -29,9 +29,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace here", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-                //Intent intent = new Intent(view.getContext(), BulldogActivity.class);
-
-                //startActivity(intent);
+                Intent intent = new Intent(view.getContext(), NewBulldogActivity.class);
+                startActivity(intent);
             }
         });
 
