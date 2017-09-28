@@ -28,10 +28,11 @@ public class MainActivity extends AppCompatActivity {
         user = realm.where(User.class).equalTo("username", getIntent().getStringExtra("username")).findFirst();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        //fab.setImageDrawable(ic_add_black_24dp);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace here", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                //Snackbar.make(view, "Replace here", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                 Intent intent = new Intent(view.getContext(), NewBulldogActivity.class);
                 startActivity(intent);
             }
